@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Child Relationships - Tree View with Lines</title>
+    <style>
+        ul {
+            list-style-type: none;
+            position: relative;
+            padding-left: 20px;
+        }
+        .node {
+            position: relative;
+        }
+        .node:before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -20px;
+            border-left: 1px solid black;
+            height: 100%;
+        }
+        .node:first-child:before {
+            display: none;
+        }
+        .node > ul:before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -20px;
+            border-top: 1px solid black;
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li class="node">
+        Parent
+        <ul>
+            <li class="node">Child 1</li>
+            <li class="node">Child 2</li>
+            <li class="node">Child 3
+                <ul>
+                    <li class="node">Grandchild 1</li>
+                    <li class="node">Grandchild 2</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>

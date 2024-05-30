@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Tree</title>
+    <style>
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box {
+            width: 120px;
+            height: 60px;
+            background-color: #fff;
+            border: 1px solid #000;
+            border-radius: 9px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+        }
+        .arrow {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid black;
+        }
+        .line {
+            position: absolute;
+            border: 1px solid black;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box" style="top: 80px; left: 80px;">
+        Mother
+        <div class="arrow" style="top: -5px; left: 55px;"></div>
+    </div>
+    <div class="box" style="top: 190px; left: 180px;">
+        Child1
+        <div class="line" style="top: 50px; left: 115px; width: 50px; height: 100px;"></div>
+    </div>
+    <div class="box" style="top: 280px; left: 180px;">
+        Child2
+        <div class="line" style="top: 50px; left: 115px; width: 50px; height: 100px;"></div>
+    </div>
+    <div class="box" style="top: 370px; left: 180px;">
+        Child3
+        <div class="line" style="top: 50px; left: 115px; width: 50px; height: 100px;"></div>
+    </div>
+</div>
+</body>
+</html>

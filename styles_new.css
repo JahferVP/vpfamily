@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+.tree {
+    width: 600px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Set background color for the container */
+}
+
+.tree ul {
+    padding-top: 20px;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.tree li {
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0 5px;
+    transition: all 0.5s;
+}
+
+.tree li a {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #666;
+    font-family: Arial, Verdana, Tahoma;
+    font-size: 11px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.tree li a:hover, .tree li a:hover + ul li a {
+    background: #c8e4f8;
+    color: #000;
+    border: 1px solid #94a0b4;
+}
+
+.tree li a:hover + ul li::after,
+.tree li a:hover + ul li::before,
+.tree li a:hover + ul::before,
+.tree li a:hover + ul ul::before {
+    border-color: #94a0b4;
+}
+
+.tree img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.parent {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    background-color: transparent;
+}
+
+.children {
+    position: relative;
+    top: 15px;
+    left: 100px;
+    width: 250px;
+    justify-content: center;
+    gap: 0px;
+    margin: 20px auto;
+    background-color: transparent;
+}
+
+.childContainer {
+    position: relative;
+    left: -46px;
+    width: 250px;
+    height: 50px;
+    margin: 5px auto;
+    background-color: transparent;
+    padding: 0px;
+}
+
+.child {
+    position: relative;
+    left: 0px;
+    width: 250px;
+    height: 50px;
+    margin: 0px auto;
+    background-color: transparent;
+    padding-left: 30px;
+    text-align: left;
+}
+
+/* Style for the horizontal line */
+.horizontal-line {
+    position: absolute;
+    top: 20px; /* Adjust the vertical position of the horizontal line */
+    left: 0px; /* Adjust the horizontal position of the horizontal line */
+    border-top: 1px solid black;
+    width: 80px; /* Adjust the length of the horizontal line */
+    border-color: #AAAAAA;
+}
+
+/* Style for the vertical line */
+.vertical-line {
+    position: absolute;
+    top: -35px;
+    left: 0; /* Position the vertical line at the beginning of the horizontal line */
+    border-left: 1px solid black; /* Adjust the border to create the vertical line */
+    height: 55px; /* Adjust the length of the vertical line */
+    border-color: #AAAAAA;
+}

@@ -13,6 +13,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f0f0f0; /* Set background color for the container */
 }
 
 .tree ul {
@@ -104,8 +105,9 @@ h1 {
 
 .parent {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 10px;
+    background-color: #f0f011; /* Set background color for the container */
 }
 
 .tree img {
@@ -114,38 +116,4 @@ h1 {
     border-radius: 50%;
     margin-right: 5px;
     vertical-align: middle;
-}
-
-@media (max-width: 600px) {
-    .tree ul {
-        padding-top: 10px;
-    }
-
-    .tree li {
-        padding: 10px 2px 0 2px;
-    }
-
-    .tree li a {
-        font-size: 10px;
-        padding: 3px 5px;
-    }
-
-    .tree img {
-        width: 20px;
-        height: 20px;
-        margin-right: 3px;
-    }
-
-    .parent {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .tree li::before, .tree li::after {
-        height: 10px;
-    }
-
-    .tree ul ul::before {
-        height: 10px;
-    }
 }

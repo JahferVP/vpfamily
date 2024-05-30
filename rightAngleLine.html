@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Right-Angled Line with Horizontal Line HTML Page</title>
+    <style>
+        /* Style for the container */
+        .container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 50px auto; /* Centers the container */
+            background-color: #f0f0f0; /* Set background color for the container */
+            padding: 0px; /* Add padding for better visualization */
+        }
+
+        /* Style for the horizontal line */
+        .horizontal-line {
+            position: absolute;
+            top: 300px; /* Adjust the vertical position of the horizontal line */
+            left: 0px; /* Adjust the horizontal position of the horizontal line */
+            border-top: 2px solid black;
+            width: 150px; /* Adjust the length of the horizontal line */
+        }
+
+        /* Style for the vertical line */
+        .vertical-line {
+            position: absolute;
+            top: 150px;
+            left: 0; /* Position the vertical line at the beginning of the horizontal line */
+            border-left: 2px solid black; /* Adjust the border to create the vertical line */
+            height: 150px; /* Adjust the length of the vertical line */
+        }
+    </style>
+</head>
+<body>
+<!-- Container for the right-angled line -->
+<div class="container">
+    <!-- Vertical line -->
+    <div class="vertical-line"></div>
+    <!-- Horizontal line -->
+    <div class="horizontal-line"></div>
+</div>
+</body>
+</html>
