@@ -14,7 +14,7 @@ h1 {
     height: 300px;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0; /* Set background color for the container */
+    background-color: transparent;
 }
 
 .tree ul {
@@ -65,10 +65,24 @@ h1 {
     vertical-align: middle;
 }
 
-.parent {
-    display: flex;
-    justify-content: left;
-    gap: 10px;
+.parents {
+   position: relative;
+   left: 0px;
+   display: flex;
+   gap: 5px;
+   width: 500px;
+   background-color: transparent;
+}
+
+.parent1 {
+    text-align: right;
+    flex-basis: 100%;
+    background-color: transparent;
+}
+
+.parent2 {
+    text-align: left;
+    flex-basis: 100%;
     background-color: transparent;
 }
 
@@ -85,7 +99,7 @@ h1 {
 
 .childContainer {
     position: relative;
-    left: -46px;
+    left: -15px;
     width: 250px;
     height: 50px;
     margin: 5px auto;
@@ -110,7 +124,7 @@ h1 {
     top: 20px; /* Adjust the vertical position of the horizontal line */
     left: 0px; /* Adjust the horizontal position of the horizontal line */
     border-top: 1px solid black;
-    width: 80px; /* Adjust the length of the horizontal line */
+    width: 30px; /* Adjust the length of the horizontal line */
     border-color: #AAAAAA;
 }
 
