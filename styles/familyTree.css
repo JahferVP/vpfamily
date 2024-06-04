@@ -83,7 +83,7 @@ h1 {
    left: 0px;
    display: flex;
    gap: 5px;
-   width: 350px;
+   width: 550px;
    background-color: transparent;
 }
 
@@ -96,17 +96,6 @@ h1 {
 .parent2 {
     text-align: left;
     flex-basis: 100%;
-    background-color: transparent;
-}
-
-.children {
-    position: relative;
-    top: 15px;
-    left: 100px;
-    width: 350px;
-    justify-content: center;
-    gap: 0px;
-    margin: 20px auto;
     background-color: transparent;
 }
 
@@ -129,24 +118,4 @@ h1 {
     background-color: transparent;
     padding-left: 30px;
     text-align: left;
-}
-
-/* Style for the horizontal line */
-.horizontal-line {
-    position: absolute;
-    top: 20px; /* Adjust the vertical position of the horizontal line */
-    left: 0px; /* Adjust the horizontal position of the horizontal line */
-    border-top: 1px solid black;
-    width: 30px; /* Adjust the length of the horizontal line */
-    border-color: #AAAAAA;
-}
-
-/* Style for the vertical line */
-.vertical-line {
-    position: absolute;
-    top: -35px;
-    left: 0; /* Position the vertical line at the beginning of the horizontal line */
-    border-left: 1px solid black; /* Adjust the border to create the vertical line */
-    height: 55px; /* Adjust the length of the vertical line */
-    border-color: #AAAAAA;
 }
