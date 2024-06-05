@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Friendly Page with Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background: #444;
+            padding: 0.5rem 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem;
+        }
+        nav a:hover {
+            background: #555;
+        }
+        .menu-icon {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        .container {
+            padding: 1rem;
+        }
+        .content {
+            background: #f4f4f4;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                display: none;
+            }
+            nav a {
+                padding: 1rem;
+                border-bottom: 1px solid #555;
+            }
+            .menu-icon {
+                display: block;
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+            }
+        }
+    </script>
+</head>
+<body>
+<header>
+    <h1>Welcome to the Mobile Friendly Page</h1>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</header>
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
+<div class="container">
+    <div class="content">
+        <h2>Responsive Design</h2>
+        <p>This is a simple example of a mobile-friendly page. The content is designed to fit within the viewport of a mobile device.</p>
+    </div>
+    <div class="content">
+        <h2>Flexibility</h2>
+        <p>Using CSS, we ensure that our content adjusts gracefully to different screen sizes, making for a better user experience.</p>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2024 Mobile Friendly Page</p>
+</footer>
+</body>
+</html>
