@@ -1,25 +1,47 @@
-header {
-    position: relative;
-    width: 100%;
-    height: 150px;
-    background: url('../images/grass.jpg') no-repeat center center/cover;
-}
-
-.header-content {
-    text-align: center;
-}
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 10px;
+    padding: 0;
     box-sizing: border-box;
     background-color: #333;
 }
 
-h1 {
-    text-align: center;
+header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background: url('../images/paddyField3.jpg') no-repeat center center/cover;
 }
+
+.header-parent-page-link {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, -25%);
+    color: black; /* Text color */
+    text-align: left;
+    font-size: 11px;
+    background-color: rgba(255, 255, 255, 0.7); /* Background color with transparency */
+    padding: 0px;
+    border-radius: 0px;
+}
+
+.header-content {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 80%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Text color */
+    text-align: center;
+    display:table;
+    background-color: rgba(0, 0, 0, 0.5); /* Background color with transparency */
+    padding: 0px;
+    border-radius: 5px;
+}
+
+.header-content h3 {display:table-cell; vertical-align:middle}
 
 .tree {
     width: 100%;
@@ -93,7 +115,7 @@ h1 {
 
 .parents {
    position: relative;
-   left: -20px;
+   left: -40px;
    display: flex;
    gap: 5px;
    width: 550px;
@@ -113,7 +135,7 @@ h1 {
 
 .childContainer {
     position: relative;
-    left: -200px;
+    left: -255px;
     width: 350px;
     height: 50px;
     margin: 5px auto;
