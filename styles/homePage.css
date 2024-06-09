@@ -49,6 +49,12 @@ nav a:hover {
 }
 .container {
     padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
+.container p {
+    word-wrap: break-word;
+    text-align: justify;
 }
 footer {
     background-color: #333;
