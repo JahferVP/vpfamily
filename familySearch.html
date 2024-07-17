@@ -28,7 +28,10 @@
 <script>
     document.getElementById('search').addEventListener('input', function() {
       const query = this.value.toLowerCase();
-      fetch('index.json')
+      if (query === "") {
+        displayResults('');
+      } else {
+        fetch('index.json')
         .then(response => response.json())
         .then(data => {
           const results = data.filter(item =>
@@ -39,6 +42,7 @@
           );
           displayResults(results);
         });
+      }
     });
 
     function displayResults(results) {
