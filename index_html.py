@@ -14,7 +14,7 @@ def extract_content(html, url):
     #wife = ' '.join([div.get_text() for div in soup.find_all('div', class_="wife")])
     children = ', '.join([div.get_text() for div in soup.find_all('div', class_="child")])
     return {
-        'url': url,
+        'url': '.\\' + url,
         'title': title,
         'lineage': lineage,
         'headings': headings,
