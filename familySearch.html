@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="./styles/familyTree.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-parent-page-link">
+        <p><a href="./index.html">Home</a></p>
+    </div>
+    <div class="header-content">
+        <input type="text" id="search" placeholder="Search...">
+    </div>
+</header>
+<div id="results"></div>
+<script>
+    document.getElementById('search').addEventListener('input', function() {
+      const query = this.value.toLowerCase();
+      fetch('index.json')
+        .then(response => response.json())
+        .then(data => {
+          const results = data.filter(item =>
+            item.title.toLowerCase().includes(query) ||
+            item.hometown.toLowerCase().includes(query) ||
+            item.parents.toLowerCase().includes(query) ||
+            item.children.toLowerCase().includes(query)
+          );
+          displayResults(results);
+        });
+    });
+
+    function displayResults(results) {
+      const resultsContainer = document.getElementById('results');
+      resultsContainer.innerHTML = '';
+      results.forEach(item => {
+        const resultItem = document.createElement('div');
+        resultItem.innerHTML = `<a href="${item.url}" style="font-size: 18px; font-weight: bold;">${item.title}</a><p><b>${item.headings}</b></p><p>കുടുംബ പരമ്പര: ${item.lineage}</p>
+        <p>${item.hometown}</p><p>ഗൃഹനാഥർ: ${item.parents}</p><p>കുട്ടികൾ: ${item.children}</p>`;
+        resultsContainer.appendChild(resultItem);
+      });
+    }
+</script>
+
+</body>
+</html>
