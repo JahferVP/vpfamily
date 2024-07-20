@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Family Search</title>
     <link rel="stylesheet" href="./styles/familyTree.css">
     <style>
         body {
@@ -38,6 +38,7 @@
             item.title.toLowerCase().includes(query) ||
             item.hometown.toLowerCase().includes(query) ||
             item.parents.toLowerCase().includes(query) ||
+            item.names.toLowerCase().includes(query) ||
             item.children.toLowerCase().includes(query)
           );
           displayResults(results);

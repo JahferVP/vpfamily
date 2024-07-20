@@ -13,6 +13,7 @@ def extract_content(html, url):
     parent2 = ' '.join([div.get_text() for div in soup.find_all('div', class_="parent2")])
     #wife = ' '.join([div.get_text() for div in soup.find_all('div', class_="wife")])
     children = ', '.join([div.get_text() for div in soup.find_all('div', class_="child")])
+    names = ' '.join([img.get('data-name') for img in soup.find_all('img') if img.get('data-name')])
     return {
         'url': '.\\' + url,
         'title': title,
@@ -21,7 +22,8 @@ def extract_content(html, url):
         'hometown': hometown,
         'parents': parent1 + ', ' +
                    parent2,
-        'children': children
+        'children': children,
+        'names': names
     }
 
 def index_html_files(directory):
